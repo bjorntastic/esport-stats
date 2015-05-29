@@ -1,0 +1,16 @@
+<h1>Leagues</h1>
+
+<table>
+	<tr>
+		<th>League</th>
+		<th>Game</th>
+		<th>View</th>
+	</tr>
+	<% @leagues.each do |l| %>
+		<tr>
+			<td><%= l.name %></td>
+			<td><%= l.game %></td>
+			<td><%= link_to 'Show me', l %></td>
+		</tr>
+	<% end %>
+</table>

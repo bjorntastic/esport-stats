@@ -11,22 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150529134812) do
-
-  create_table "games", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20150529142736) do
 
   create_table "leagues", force: :cascade do |t|
     t.string   "name"
     t.string   "format"
     t.datetime "start_date"
     t.datetime "end_date"
-    t.integer  "game_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "game_name"
   end
 
   create_table "matches", force: :cascade do |t|
@@ -43,7 +37,6 @@ ActiveRecord::Schema.define(version: 20150529134812) do
     t.string   "name"
     t.string   "role"
     t.integer  "team_id"
-    t.integer  "game_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "match_id"
@@ -52,6 +45,7 @@ ActiveRecord::Schema.define(version: 20150529134812) do
     t.integer  "assists"
     t.integer  "minions"
     t.integer  "total_gold"
+    t.integer  "league_id"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -59,9 +53,9 @@ ActiveRecord::Schema.define(version: 20150529134812) do
     t.string   "country"
     t.string   "captain"
     t.string   "owner"
-    t.integer  "game_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "league_id"
   end
 
 end
