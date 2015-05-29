@@ -4,8 +4,43 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+
+cw:
+  name: "Copenhagen Wolves"
+  league: eu_lcs_2015_summmer
+
+el:
+  name: "Elements"
+  league: eu_lcs_2015_summmer
+
+fnc:
+  name: "Fnatic"
+  league: eu_lcs_2015_summmer
+
+h2k:
+  name: "H2K"
+  league: eu_lcs_2015_summmer
+
+og:
+  name: "Origen"
+  league: eu_lcs_2015_summmer
+
+gia:
+  name: "Giants Gaming"
+  league: eu_lcs_2015_summmer
+
+uol:
+  name: "Unicorns of Love"
+  league: eu_lcs_2015_summmer
+
+roc:
+  name: "ROCCAT"
+  league: eu_lcs_2015_summmer
+
+gg:
+  name: "Gambit Gaming"
+  league: eu_lcs_2015_summmer
+
+sk:
+  name: "SK Gaming"
+  league: eu_lcs_2015_summmer
