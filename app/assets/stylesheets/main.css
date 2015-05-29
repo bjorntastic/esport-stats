@@ -1,0 +1,12 @@
+aside {
+	float: right;
+}
+
+aside li {
+	display: inline-block;
+	padding-right: 5px;
+}
+
+body {
+	padding-left: 10px;
+}

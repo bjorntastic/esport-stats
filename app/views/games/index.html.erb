@@ -1,1 +1,14 @@
 <h1>Games</h1>
+
+<table>
+	<tr>
+		<th>Game</th>
+		<th>View</th>
+	</tr>
+	<% @games.each do |game| %>
+		<tr>
+			<td><%= game.name %></td>
+			<td><%= link_to 'Show me', game %></td>
+		</tr>
+	<% end %>
+</table>
