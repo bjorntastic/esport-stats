@@ -10,3 +10,8 @@ aside li {
 body {
 	padding-left: 10px;
 }
+
+table th, table td {
+	text-align: left;
+	padding-right: 20px;
+}

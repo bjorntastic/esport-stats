@@ -1,1 +1,21 @@
 <h1>Teams</h1>
+
+<table>
+	<tr>
+		<th>Team</th>
+		<th>League</th>
+		<th>Country</th>
+		<th>Captain</th>
+		<th>View</th>
+	</tr>
+
+	<% @teams.each do |t| %>
+	<tr>
+		<td><%= t %></td>
+		<td><%= t.league.name %></td>
+		<td><%= t.country %></td>
+		<td><%= t.captain %></td>
+		<td><%= link_to 'Show', t %></td>
+	</tr>
+	<% end %>
+</table>
