@@ -6,7 +6,8 @@
 		<th>League</th>
 		<th>Country</th>
 		<th>Captain</th>
-		<th>View</th>
+		<th>Wins</th>
+		<th></th>
 	</tr>
 
 	<% @teams.each do |t| %>
@@ -15,6 +16,9 @@
 		<td><%= t.league.name %></td>
 		<td><%= t.country %></td>
 		<td><%= t.captain %></td>
+
+		<td><%= @matches.count %></td>
+		
 		<td><%= link_to 'Show', t %></td>
 	</tr>
 	<% end %>
