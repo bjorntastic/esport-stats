@@ -13,7 +13,7 @@
 	<% @teams.each do |t| %>
 	<tr>
 		<td><%= t %></td>
-		<td><%= t.league.name %></td>
+		<td><%= link_to t.league.name, t.league %></td>
 		<td><%= t.country %></td>
 		<td><%= t.captain %></td>
 
