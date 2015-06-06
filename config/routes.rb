@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   get '/' => 'application#welcome', as: :welcome
+  post '/leagues/new' =>'leagues#create'
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products

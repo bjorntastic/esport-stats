@@ -1,5 +1,7 @@
 <h1>Teams</h1>
 
+<p><%= link_to 'New Team', new_team_path %></p>
+
 <table>
 	<tr>
 		<th>Team</th>
@@ -16,10 +18,9 @@
 		<td><%= link_to t.league.name, t.league %></td>
 		<td><%= t.country %></td>
 		<td><%= t.captain %></td>
-
-		<td><%= @matches.count %></td>
-		
+		<td><%= @match_count %></td>
 		<td><%= link_to 'Show', t %></td>
+		<td><%= link_to 'Delete', t, :method => 'delete' %></td>
 	</tr>
 	<% end %>
 </table>

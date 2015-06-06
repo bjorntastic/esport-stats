@@ -1,0 +1,31 @@
+	<%= form_for(@team) do |f| %>
+
+		<table class='form'>
+			
+			<tr>
+				<th><%= f.label :name %></th>
+				<td><%= f.text_field :name %></td>
+			</tr>
+
+			<tr>
+				<th><%= f.label :league_id, "League" %></th>
+				<td><%= f.select :league_id, @leagues.map{ |l| [l.name.to_s, l.id.to_i] } %></td>
+			</tr>
+
+			<tr>
+				<th><%= f.label :country %></th>
+				<td><%= f.text_field :country %></td>
+			</tr>
+
+			<tr>
+				<th><%= f.label :captain %></th>
+				<td><%= f.text_field :captain %></td>
+			</tr>
+
+			<tr>
+				<td><%= f.submit @team.new_record? ? "Add Team" : "Update Team" %></td>
+			</tr>
+
+		</table>
+	
+	<% end %>

@@ -1,5 +1,7 @@
 <h1>Leagues</h1>
 
+<p><%= link_to 'Create League', :action => 'new' %></p>
+
 <table>
 	<tr>
 		<th>League</th>
@@ -11,6 +13,7 @@
 			<td><%= l.name %></td>
 			<td><%= l.game_name %></td>
 			<td><%= link_to 'Show', l %></td>
+			<td><%= link_to 'Delete', l, :method => 'delete' %></td>
 		</tr>
 	<% end %>
 </table>

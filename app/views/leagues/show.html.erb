@@ -1,1 +1,7 @@
 <h1><%= @league.name %></h1>
+
+<p><%= link_to 'Back', :back %></p>
+<p><%= link_to 'Edit', edit_league_path %></p>
+<p><%= link_to 'Delete', @league, :method => 'delete' %></p>
+
+<p>League info stuff</p>
