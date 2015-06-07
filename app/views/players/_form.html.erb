@@ -1,0 +1,51 @@
+<%= form_for @player do |f| %>
+
+	<table class='form'>
+
+		<tr>
+			<th><%= f.label :name %></th>
+			<td><%= f.text_field :name %></th>
+		</tr>
+
+		<tr>
+			<th><%= f.label :role %></th>
+			<td><%= f.select :role, ["ADC", "Mid", "Top", "Jungle", "Support"] %></td>
+		</tr>
+
+		<tr>
+			<th><%= f.label :team_id, "Team" %></th>
+			<td><%= f.select :team_id, @teams.map { |t| [t.name, t.id] } %></td>
+		</tr>
+		
+		<tr>
+			<th><%= f.label :kills %></th>
+			<td><%= f.number_field :kills %></td>
+		</tr>
+		
+		<tr>
+			<th><%= f.label :deaths %></th>
+			<td><%= f.number_field :deaths %></td>
+		</tr>
+
+		<tr>
+			<th><%= f.label :assists %></th>
+			<td><%= f.number_field :assists %></td>
+		</tr>
+
+		<tr>
+			<th><%= f.label :minions %></th>
+			<td><%= f.number_field :minions %></td>
+		</tr>
+		
+		<tr>
+			<th><%= f.label :total_gold %></th>
+			<td><%= f.number_field :total_gold %></td>
+		</tr>
+
+		<tr>
+			<td><%= f.submit %></td>
+		</tr>	
+		
+	</table>
+
+<% end %>

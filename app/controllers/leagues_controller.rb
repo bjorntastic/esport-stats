@@ -17,7 +17,7 @@ class LeaguesController < ApplicationController
 
 		if @league.update_attributes(league_params)
 			flash[:notice] = 'New League created'
-			redirect_to @league
+			redirect_to :leagues
 		else
 			render 'new'
 		end

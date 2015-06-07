@@ -1,1 +1,35 @@
 <h1>Players</h1>
+
+<p><%= link_to 'New Player', new_player_path %></p>
+
+<p>player info stuff for index</p>
+
+<table>
+
+	<tr>
+		<th>Name</th>
+		<th>Kills</th>
+		<th>Deaths</th>
+		<th>Assists</th>
+		<th>Minions</th>
+		<th>Gold</th>
+		<th></th>
+		<th></th>
+	</tr>
+
+<% @players.each do |p| %>
+
+	<tr>
+		<td><%= p.name %></td>
+		<td><%= p.kills %></td>
+		<td><%= p.deaths %></td>
+		<td><%= p.assists %></td>
+		<td><%= p.minions %></td>
+		<td><%= p.total_gold %></td>
+		<td><%= link_to 'View', p %></td>
+		<td><%= link_to 'Delete', p, :method => 'delete' %></td>
+	</tr>
+
+<% end %>
+
+</table>

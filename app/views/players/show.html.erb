@@ -1,0 +1,16 @@
+<h1><%= @player %></h1>
+
+<p><%= link_to 'Back', :back %></p>
+<p><%= link_to 'Edit', edit_player_path %></p>
+<p><%= link_to 'Delete', p, :method => 'delete' %></p>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<td><%= @player.name %></td>
+	</tr>
+	<tr>
+		<th>Kills</th>
+		<td><%= @player.kills %></td>
+	</tr>
+</table>

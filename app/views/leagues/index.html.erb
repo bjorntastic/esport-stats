@@ -1,11 +1,12 @@
 <h1>Leagues</h1>
 
-<p><%= link_to 'Create League', :action => 'new' %></p>
+<p><%= link_to 'New League', new_league_path %></p>
 
 <table>
 	<tr>
 		<th>League</th>
 		<th>Game</th>
+		<th></th>
 		<th></th>
 	</tr>
 	<% @leagues.each do |l| %>
