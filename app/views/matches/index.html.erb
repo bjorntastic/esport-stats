@@ -1,1 +1,26 @@
 <h1>Matches</h1>
+
+<p><%= link_to 'Create Match', new_match_path %></p>
+
+<table>
+	<tr>
+		<th>Date</th>
+		<th>Winner</th>
+		<th>Loser</th>
+		<th>Length</th>
+		<th></th>
+		<th></th>
+	</tr>
+
+	<% @matches.each do |m| %>
+
+	<tr>
+		<td><%= m.start_time.strftime('%m/%d/%y') %></td>
+		<td><%= @teams_hash[m.winner_id] %></td>
+		<td><%= @teams_hash[m.loser_id] %></td>
+		<td><%= m.match_length.nil? ? "N/A" : "#{m.match_length.to_i} min" %></td>
+		<td><%= link_to 'View', m %></td>
+		<td><%= link_to 'Delete', m, :method => 'delete' %></td>
+	</tr>
+	<% end %>
+</table>
