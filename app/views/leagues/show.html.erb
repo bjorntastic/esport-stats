@@ -4,4 +4,18 @@
 <p><%= link_to 'Edit', edit_league_path %></p>
 <p><%= link_to 'Delete', @league, :method => 'delete' %></p>
 
-<p>League info stuff</p>
+<h3>Teams in the league:</h3>
+
+<table>
+	<tr>
+		<th>Team</th>
+	</tr>
+
+	<% @league.teams.each do |t| %>
+
+	<tr>
+		<td><%= t.name %></td>
+	</tr>
+
+	<% end %>
+</table>
