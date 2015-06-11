@@ -15,7 +15,8 @@ Rails.application.routes.draw do
 
   get '/' => 'application#welcome', as: :welcome
   post '/leagues/new' =>'leagues#create'
-
+  get 'access' => 'access#login', as: :login
+  get 'attempt_login' => 'access#attempt_login'
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 

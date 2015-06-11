@@ -45,6 +45,7 @@ class MatchesController < ApplicationController
 
 	def destroy
 		Match.find(params[:id]).destroy
+		flash[:notice] = "Match deleted successfully."
 		redirect_to :matches
 	end
 
